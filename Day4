@@ -1,0 +1,46 @@
+Ques1  Write a program to swap two numbers without using a third variable.
+#include <stdio.h>
+
+int main() 
+{
+    int a, b;
+    
+    // Input two numbers
+    printf("Enter the first number:");
+    scanf("%d ,&a);
+    printf("enter the secod number:");
+    scanf("%d ,&b");
+    // Swap without third variable
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    
+    // Display swapped values
+    printf("After swap: %d %d\n", a, b);
+    
+    return 0;
+}
+
+Ques2 Write a program to find and display the sum of the first n natural numbers.
+#include <stdio.h>
+
+int main() {
+    int n;
+    int sum = 0;
+    
+    // Input the number n
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+    
+    // Calculate sum of first n natural numbers
+    for (int i = 1; i <= n; i++) 
+    {
+        sum += i;
+    }
+    
+    // Display the sum
+    printf("Sum=%d\n", sum);
+    
+    return 0;
+}
+
