@@ -1,0 +1,44 @@
+Ques1: Write a program to convert temperature from Celsius to Fahrenheit.
+#include <stdio.h>
+
+int main() {
+    int celsius;
+    
+    // Input temperature in Celsius
+    printf("Enter temperature in Celsius: ");
+    scanf("%d", &celsius);
+    
+    // Convert to Fahrenheit
+
+    int fahrenheit = (celsius * 9 / 5) + 32;
+    
+    // Display output
+    printf("Fahrenheit=%d\n", fahrenheit);
+    
+    return 0;
+}
+
+Ques2: Write a program to swap two numbers using a third variable.
+#include <stdio.h>
+
+int main() {
+    int a, b, temp;
+    
+    // Input two numbers
+    printf("Enter the first number (a): ");
+    scanf("%d ,&a);
+    printf("Enter the second number (b): ");
+    scanf("%d ,&b);
+    
+    // Swap using third variable
+    temp = a;
+    a = b;
+    b = temp;
+    
+    // Display swapped values
+    printf("After swap: %d %d\n", a, b);
+    
+    return 0;
+}
+
+
