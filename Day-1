@@ -1,0 +1,49 @@
+Ques1 Write a program to input two numbers and display their sum.
+#include <stdio.h>
+
+int main() 
+{
+    int num1, num2, sum;
+    
+    // Input two numbers
+    scanf("%d %d", &num1, &num2);
+    
+    // Calculate sum
+    sum = num1 + num2;
+    
+    // Display result
+    printf("Sum = %d\n", sum);
+    
+    return 0;
+}
+
+Ques2 Write a program to input two numbers and display their sum, difference, product, and quotient.
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+
+    int sum = num1 + num2;
+    int difference = num1 - num2;
+    int product = num1 * num2;
+
+    printf("\nResults:\n");
+    printf("Sum = %d\n", sum);
+    printf("Difference = %d\n", difference);
+    printf("Product = %d\n", product);
+
+    if (num2 != 0) {
+        int quotient = num1 / num2;
+        printf("Quotient = %d\n", quotient);
+    } else {
+        printf("Quotient = Undefined (division by zero is not allowed)\n");
+    }
+
+    return 0;
+}
