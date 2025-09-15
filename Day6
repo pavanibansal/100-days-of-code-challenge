@@ -1,1 +1,35 @@
+Q11: Write a program to input an integer and check whether it is even or odd using if–else.
 
+/*
+Sample Test Cases:
+Input 1:
+7
+Output 1:
+7 is odd
+
+Input 2:
+12
+Output 2:
+12 is even
+
+*/
+Code:
+#include <stdio.h>
+
+int main() {
+    int totalSeconds;
+    int hours, minutes, seconds;
+
+    printf("Enter time in seconds: ");
+    scanf("%d", &totalSeconds);
+
+    hours = totalSeconds / 3600;
+    totalSeconds = totalSeconds % 3600;
+
+    minutes = totalSeconds / 60;
+    seconds = totalSeconds % 60;
+
+    printf("Time = %02d:%02d:%02d\n", hours, minutes, seconds);
+
+    return 0;
+}
