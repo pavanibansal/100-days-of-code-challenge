@@ -17,19 +17,57 @@ Code:
 #include <stdio.h>
 
 int main() {
-    int totalSeconds;
-    int hours, minutes, seconds;
+    int number;
+    
+    printf("Enter an integer: ");
+    scanf("%d", &number);
 
-    printf("Enter time in seconds: ");
-    scanf("%d", &totalSeconds);
+    if (number % 2 == 0) {
+        printf("%d is even.\n", number);
+    } else {
+        printf("%d is odd.\n", number);
+    }
 
-    hours = totalSeconds / 3600;
-    totalSeconds = totalSeconds % 3600;
+    return 0;
+}
+Q12: Write a program to input an integer and check whether it is positive, negative or zero using nested if–else.
 
-    minutes = totalSeconds / 60;
-    seconds = totalSeconds % 60;
+/*
+Sample Test Cases:
+Input 1:
+-5
+Output 1:
+Negative
 
-    printf("Time = %02d:%02d:%02d\n", hours, minutes, seconds);
+Input 2:
+0
+Output 2:
+Zero
+
+Input 3:
+10
+Output 3:
+Positive
+
+*/
+Code:
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    if (number >= 0) {
+        if (number == 0) {
+            printf("The number is zero.\n");
+        } else {
+            printf("The number is positive.\n");
+        }
+    } else {
+        printf("The number is negative.\n");
+    }
 
     return 0;
 }
