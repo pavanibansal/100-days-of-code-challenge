@@ -1,0 +1,96 @@
+Q53: Write a program to print the following pattern:
+*
+***
+*****
+*******
+*********
+*******
+*****
+***
+*
+
+/*
+Sample Test Cases:
+Input 1:
+
+Output 1:
+*
+***
+*****
+*******
+*********
+*******
+*****
+***
+*
+
+*/
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    int n = 5;  // Number of lines in the top half
+
+    // Upper half of the pattern
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    // Lower half of the pattern
+    for (i = n - 1; i >= 1; i--) {
+        for (j = 1; j <= 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+Q54: Write a program to print the following pattern:
+
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+
+
+/*
+Sample Test Cases:
+Input 1:
+
+Output 1:
+Pattern with layers of stars as shown.
+
+*/
+#include <stdio.h>
+
+int main() {
+    int i, j, space;
+    int n = 5; // Number of rows in the top half
+
+    // Upper half of the pattern
+    for (i = 1; i <= n; i++) {
+        for (space = i; space < n; space++)  // Print spaces
+            printf(" ");
+        for (j = 1; j <= (2 * i - 1); j++)   // Print stars
+            printf("*");
+        printf("\n");
+    }
+
+    // Lower half of the pattern
+    for (i = n - 1; i >= 1; i--) {
+        for (space = n; space > i; space--)  // Print spaces
+            printf(" ");
+        for (j = 1; j <= (2 * i - 1); j++)   // Print stars
+            printf("*");
+        printf("\n");
+    }
+
+    return 0;
+}
