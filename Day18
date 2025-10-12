@@ -1,0 +1,78 @@
+Q35: Write a program to print all factors of a given number.
+
+/*
+Sample Test Cases:
+Input 1:
+6
+Output 1:
+1 2 3 6
+
+Input 2:
+10
+Output 2:
+1 2 5 10
+
+*/
+
+Code :
+#include <stdio.h>
+
+int main() {
+    int num, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    printf("Factors of %d are: ", num);
+
+    for (i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            printf("%d ", i);
+        }
+    }
+
+    printf("\n");
+    return 0;
+}
+
+
+
+
+Q36: Write a program to find the HCF (GCD) of two numbers.
+
+/*
+Sample Test Cases:
+Input 1:
+12 18
+Output 1:
+6
+
+Input 2:
+7 9
+Output 2:
+1
+
+*/
+
+Code :
+#include <stdio.h>
+
+int findHCF(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int main() {
+    int num1, num2;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("HCF of %d and %d is: %d\n", num1, num2, findHCF(num1, num2));
+
+    return 0;
+}
