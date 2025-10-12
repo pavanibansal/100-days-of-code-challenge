@@ -1,0 +1,83 @@
+Q41: Write a program to swap the first and last digit of a number.
+
+/*
+Sample Test Cases:
+Input 1:
+1234
+Output 1:
+4231
+
+Input 2:
+1001
+Output 2:
+1001
+
+*/
+
+Code :
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, first, last, digits, swapped;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    last = num % 10;   
+    digits = (int)log10(num); 
+    first = num / (int)pow(10, digits);
+
+    
+    int middle = num % (int)pow(10, digits);
+    middle = middle / 10;
+
+    swapped = last * (int)pow(10, digits) + middle * 10 + first;
+
+    printf("Number after swapping first and last digit: %d\n", swapped);
+
+    return 0;
+}
+
+
+
+
+Q42: Write a program to check if a number is a perfect number.
+
+/*
+Sample Test Cases:
+Input 1:
+6
+Output 1:
+Perfect number
+
+Input 2:
+10
+Output 2:
+Not perfect number
+
+*/
+
+Code :
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+
+    if (sum == num && num != 0) {
+        printf("%d is a Perfect Number.\n", num);
+    } else {
+        printf("%d is NOT a Perfect Number.\n", num);
+    }
+
+    return 0;
+}
