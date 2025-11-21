@@ -34,39 +34,40 @@ Output 4:
 int main() 
 {
     int n;
-
-  
+    
     printf("Enter size of array: ");
     scanf("%d", &n);
 
-    int arr[n];
+    int nums[n], answer[n];
 
-   
     printf("Enter %d elements: ", n);
     for(int i = 0; i < n; i++) 
     {
-        scanf("%d", &arr[i]);
+        scanf("%d", &nums[i]);
     }
 
-   
-    printf("Previous Greater Elements:\n");
-    for(int i = 0; i < n; i++)  
+ 
+    for(int i = 0; i < n; i++) 
     {
-        int prev = -1;
+        int product = 1;
 
-        
-       for(int j = i - 1; j >= 0; j--) 
-       {
-            if(arr[j] > arr[i]) 
-            {
-                prev = arr[j];
-                break;  
-            }
+        for(int j = 0; j < n; j++) 
+        {
+            if(i != j)
+                product *= nums[j];
         }
 
-        printf("%d", prev);
+        answer[i] = product;
+    }
+
+ 
+    printf("[");
+    for(int i = 0; i < n; i++) 
+    {
+        printf("%d", answer[i]);
         if(i != n - 1) printf(", ");
     }
+    printf("]");
 
     return 0;
 }
